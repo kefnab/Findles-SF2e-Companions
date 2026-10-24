@@ -12,7 +12,7 @@ This is primarily a project to teach myself module programming and Typescript.
 
 **Project Licensing:**
 
-- All HTML, CSS and Javascript in this project is licensed under the Apache License v2.
+- All HTML, CSS and Javascript in this project is licensed under the GNU GENERAL PUBLIC LICENSE v3.
 
 **Content Usage and Licensing:**
 

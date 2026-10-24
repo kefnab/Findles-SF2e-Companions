@@ -9,6 +9,7 @@
     "dev": "vite build --watch"
   },
   "devDependencies": {
+    "@foundryvtt/foundryvtt-cli": "^3.0.5",
     "@sveltejs/vite-plugin-svelte": "^7.0.0",
     "@types/node": "^26.6.5",
     "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
