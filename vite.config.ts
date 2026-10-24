@@ -9,7 +9,7 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: path.resolve(import.meta.dirname, 'src/index.ts'),
-      name: 'findles-starfinder-helper',
+      name: 'findles-sf2e-companions',
       formats: ['es'],
       fileName: () => 'index.js'
     }

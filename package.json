@@ -1,8 +1,8 @@
 {
-  "name": "findles-starfinder-helper",
+  "name": "findles-sf2e-companions",
   "version": "0.0.0",
   "type": "module",
-  "description": "Starfinder 2e helper module for Foundry VTT v14+",
+  "description": "Starfinder 2e helper module for Foundry VTT v14+ that looks to add quality of life improvements for players and GMs alike for Tech Core. This module is a work in progress and will be updated as new features are added.",
   "license": "Apache-2.0",
   "scripts": {
     "build": "tsc --noEmit && vite build",
