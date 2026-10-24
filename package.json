@@ -1,0 +1,20 @@
+{
+  "name": "findles-starfinder-helper",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Starfinder 2e helper module for Foundry VTT v14+",
+  "license": "Apache-2.0",
+  "scripts": {
+    "build": "tsc --noEmit && vite build",
+    "dev": "vite build --watch"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "fvtt-types": "github:League-of-Foundry-Developers/foundry-vtt-types#main",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

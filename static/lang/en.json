@@ -1,0 +1,11 @@
+{
+  "FINDLES_SF2E": {
+    "WelcomeMessage": "My SF2e Module loaded from GitHub Release!",
+    "Settings": {
+      "EnableWelcome": {
+        "Name": "Show Welcome Notification",
+        "Hint": "Display a confirmation banner when the Starfinder 2e world finishes loading."
+      }
+    }
+  }
+}

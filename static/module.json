@@ -1,0 +1,40 @@
+{
+  "id": "findles-starfinder-helper",
+  "title": "Findle's Starfinder Helper",
+  "description": "Starfinder 2e helper module for Foundry VTT v14+ that looks to add quality of life improvements for players and GMs alike for Tech Core. This module is a work in progress and will be updated as new features are added.",
+  "version": "0.0.0",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+    "name": "Findle",
+    "discord": "Findle_Fuzzytoe"
+    }
+  ],
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.367"
+  },
+  "system": ["sf2e"],
+  "esmodules": [
+    "index.js"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+      "id": "sf2e",
+      "type": "system",
+      "compatibility": {
+        "minimum": "1.6.0",
+        "verified": "1.6.0"
+        }
+      }
+    ]
+  }
+}

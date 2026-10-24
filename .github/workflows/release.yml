@@ -1,0 +1,82 @@
+name: Release Module
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+  id-token: write
+  attestations: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository with submodules
+        uses: actions/checkout@v7
+        with:
+          submodules: recursive
+          fetch-depth: 1
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Stamp version from Git tag into package.json
+        run: |
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+          npm version "$VERSION" --no-git-tag-version --allow-same-version
+          
+      - name: Build module
+        run: npm run build
+
+      - name: Inject version & release URLs into manifest
+        run: |
+          TAG="${{ github.ref_name }}"
+          VERSION="${TAG#v}"
+          REPO="${{ github.repository }}"
+
+          DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${TAG}/module.zip"
+          MANIFEST_URL="https://github.com/${REPO}/releases/latest/download/module.json"
+
+          jq --arg ver "$VERSION" \
+             --arg dl "$DOWNLOAD_URL" \
+             --arg mf "$MANIFEST_URL" \
+             '.version = $ver | .download = $dl | .manifest = $mf' \
+             dist/module.json > dist/module.json.tmp && mv dist/module.json.tmp dist/module.json
+
+      - name: Package module zip
+        run: |
+          cd dist
+          zip -r ../module.zip ./*
+          cd ..
+
+      - name: Generate Checksums
+        run: |
+          sha256sum module.zip dist/module.json > checksums.sha256
+
+      - name: Attest Build Provenance
+        uses: actions/attest-build-provenance@v4
+        with:
+          subject-path: |
+            module.zip
+            dist/module.json
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v3
+        with:
+          files: |
+            module.zip
+            dist/module.json
+            checksums.sha256
+          generate_release_notes: true
+          draft: false
+          prerelease: false
