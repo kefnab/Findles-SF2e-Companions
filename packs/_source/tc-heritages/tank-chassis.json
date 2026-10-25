@@ -1,0 +1,72 @@
+{
+  "_id": "r0b0tTankChass01",
+  "name": "Tank Chassis",
+  "type": "heritage",
+  "img": "modules/findles-sf2e-companions/assets/icons/robot-companion.svg",
+  "system": {
+    "ancestry": null,
+    "description": {
+      "value": "<p>A heavily plated, treaded frame built to take punishment.</p><p><strong>Size</strong> Medium or Large</p><p><strong>Speeds</strong> land 20 feet</p><p><strong>Attacks</strong> Melee <span class=\"action-glyph\">1</span> battering ram (shove), Damage 1d6 bludgeoning</p><p><strong>Attribute Modifiers</strong> Str +2, Dex +1, Con +3, Int -4, Wis +2, Cha -1</p><p><strong>Ancestry Hit Points</strong> 10</p><p><strong>Trained Skill</strong> Intimidation</p><p><strong>Senses</strong> Low-light vision (plus the construct base senses: precise vision, imprecise hearing, vague touch)</p><hr /><p><strong>Support Benefit: Tactical Targeting Assistance</strong> Your robot companion assists you in battle. You gain a +1 circumstance bonus on your next attack roll to Strike a foe within the robot companion's melee reach. The bonus lasts until the first time you Strike or until the beginning of your next turn, whichever comes first.</p><p><strong>Advanced Maneuver: Ram Slam</strong> <span class=\"action-glyph\">2</span> (Traversal) Your robot companion Strides in a straight line and makes a battering ram Strike. As long as it moved at least 20 feet and successfully hit, the target is pushed back 10 feet. (Requires Advanced Drone feat)</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Starfinder Tech Core"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          { "label": "PF2E.ActorSizeMedium", "value": "med" },
+          { "label": "PF2E.ActorSizeLarge", "value": "lg" }
+        ],
+        "flag": "size",
+        "prompt": "Select a size for the Tank Chassis."
+      },
+      {
+        "key": "CreatureSize",
+        "value": "{item|flags.pf2e.rulesSelections.size}"
+      },
+      { "key": "BaseSpeed", "selector": "land", "value": 20 },
+      { "key": "Sense", "selector": "lowLightVision" },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.intimidation.rank",
+        "value": 1
+      },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.str.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.dex.mod", "value": 1 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.con.mod", "value": 3 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.int.mod", "value": -4 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.wis.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.cha.mod", "value": -1 },
+      {
+        "key": "FlatModifier",
+        "label": "Tank Chassis Hit Points",
+        "selector": "hp",
+        "value": 10
+      },
+      {
+        "key": "Strike",
+        "category": "unarmed",
+        "damage": { "base": { "damageType": "bludgeoning", "dice": 1, "die": "d6" } },
+        "group": "brawling",
+        "img": "systems/sf2e/icons/default-icons/melee.svg",
+        "label": "Battering Ram",
+        "slug": "battering-ram",
+        "traits": ["shove"]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": ["companion", "robot", "tech"]
+    }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!r0b0tTankChass01"
+}

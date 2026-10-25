@@ -1,0 +1,82 @@
+{
+  "_id": "r0b0tPowerfulC01",
+  "name": "Powerful Chassis",
+  "type": "heritage",
+  "img": "modules/findles-sf2e-companions/assets/icons/robot-companion.svg",
+  "system": {
+    "ancestry": null,
+    "description": {
+      "value": "<p>A heavy-duty frame built for raw strength.</p><p><strong>Size</strong> Medium or Large</p><p><strong>Speeds</strong> land 30 feet</p><p><strong>Attacks</strong> Melee <span class=\"action-glyph\">1</span> hydraulic fist, Damage 1d8 bludgeoning; Melee <span class=\"action-glyph\">1</span> serrated blade, Damage 1d8 slashing</p><p><strong>Attribute Modifiers</strong> Str +3, Dex +1, Con +2, Int -4, Wis +2, Cha -1</p><p><strong>Ancestry Hit Points</strong> 8</p><p><strong>Trained Skill</strong> Intimidation</p><p><strong>Senses</strong> Low-light vision (plus the construct base senses: precise vision, imprecise hearing, vague touch)</p><hr /><p><strong>Support Benefit: Rend &amp; Bleed</strong> Your robot companion mercilessly tears with its blade. Until the start of your next turn, your Strikes that damage creatures within your robot companion's melee reach also deal 1d6 persistent bleed damage (2d6 if your robot companion is burly or deft).</p><p><strong>Advanced Maneuver: Hydraulic Flipper</strong> <span class=\"action-glyph\">2</span> The robot companion makes a melee Strike. On a successful hit, it knocks the target prone. (Requires Advanced Drone feat)</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Starfinder Tech Core"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          { "label": "PF2E.ActorSizeMedium", "value": "med" },
+          { "label": "PF2E.ActorSizeLarge", "value": "lg" }
+        ],
+        "flag": "size",
+        "prompt": "Select a size for the Powerful Chassis."
+      },
+      {
+        "key": "CreatureSize",
+        "value": "{item|flags.pf2e.rulesSelections.size}"
+      },
+      { "key": "BaseSpeed", "selector": "land", "value": 30 },
+      { "key": "Sense", "selector": "lowLightVision" },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.intimidation.rank",
+        "value": 1
+      },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.str.mod", "value": 3 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.dex.mod", "value": 1 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.con.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.int.mod", "value": -4 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.wis.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.cha.mod", "value": -1 },
+      {
+        "key": "FlatModifier",
+        "label": "Powerful Chassis Hit Points",
+        "selector": "hp",
+        "value": 8
+      },
+      {
+        "key": "Strike",
+        "category": "unarmed",
+        "damage": { "base": { "damageType": "bludgeoning", "dice": 1, "die": "d8" } },
+        "group": "brawling",
+        "img": "systems/sf2e/icons/default-icons/melee.svg",
+        "label": "Hydraulic Fist",
+        "slug": "hydraulic-fist",
+        "traits": []
+      },
+      {
+        "key": "Strike",
+        "category": "unarmed",
+        "damage": { "base": { "damageType": "slashing", "dice": 1, "die": "d8" } },
+        "group": "brawling",
+        "img": "systems/sf2e/icons/default-icons/melee.svg",
+        "label": "Serrated Blade",
+        "slug": "serrated-blade",
+        "traits": []
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": ["companion", "robot", "tech"]
+    }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!r0b0tPowerfulC01"
+}

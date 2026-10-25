@@ -1,0 +1,74 @@
+{
+  "_id": "r0b0tImit4torC01",
+  "name": "Imitator Chassis",
+  "type": "heritage",
+  "img": "modules/findles-sf2e-companions/assets/icons/robot-companion.svg",
+  "system": {
+    "ancestry": null,
+    "description": {
+      "value": "<p>A synthetic frame that convincingly mimics a living creature.</p><p><strong>Size and Speeds</strong> Same as the selected species (adjust manually on the sheet)</p><p><strong>Attacks</strong> Melee <span class=\"action-glyph\">1</span> imitated unarmed attack (agile, finesse), Damage 1d4, damage type matching the selected species' attack</p><p><strong>Attribute Modifiers</strong> Str +2, Dex +2, Con +2, Int -4, Wis +2, Cha +1</p><p><strong>Ancestry Hit Points</strong> 4</p><p><strong>Trained Skill</strong> Deception</p><p><strong>Senses</strong> Low-light vision (plus the construct base senses: precise vision, imprecise hearing, vague touch)</p><hr /><p><strong>Synthetic Mimicry</strong> Select one ancestry or animal species. Your robot companion is the same size as the selected species, has the same Speeds, looks like a member of that species, and gains one unarmed attack option that species possesses (dealing 1d4 damage with agile and finesse traits).</p><p><strong>Support Benefit: Distracting Imitation</strong> Your robot companion focuses on your target, distracting one enemy within the first range increment of its weapon or within its reach. Until the start of your next turn, your Strikes that deal damage against that target make the target off-guard until the start of your next turn.</p><p><strong>Advanced Maneuver: Disturbing Display</strong> <span class=\"action-glyph\">1</span> (Visual) The robot companion morphs its features to reveal the machinery writhing beneath its synthetic skin. The robot companion attempts to Demoralize a creature using Deception instead of Intimidation; this display gains the visual trait and doesn't require a language. While frightened by this ability, the target is off-guard to your robot companion. (Requires Advanced Drone feat)</p>"
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Starfinder Tech Core"
+    },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "adjustName": false,
+        "choices": [
+          { "label": "PF2E.Damage.Types.bludgeoning", "value": "bludgeoning" },
+          { "label": "PF2E.Damage.Types.piercing", "value": "piercing" },
+          { "label": "PF2E.Damage.Types.slashing", "value": "slashing" }
+        ],
+        "flag": "damageType",
+        "prompt": "Select the damage type of the imitated species' unarmed attack."
+      },
+      { "key": "Sense", "selector": "lowLightVision" },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.deception.rank",
+        "value": 1
+      },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.str.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.dex.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.con.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.int.mod", "value": -4 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.wis.mod", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.cha.mod", "value": 1 },
+      {
+        "key": "FlatModifier",
+        "label": "Imitator Chassis Hit Points",
+        "selector": "hp",
+        "value": 4
+      },
+      {
+        "key": "Strike",
+        "category": "unarmed",
+        "damage": {
+          "base": {
+            "damageType": "{item|flags.pf2e.rulesSelections.damageType}",
+            "dice": 1,
+            "die": "d4"
+          }
+        },
+        "group": "brawling",
+        "img": "systems/sf2e/icons/default-icons/melee.svg",
+        "label": "Imitated Unarmed Attack",
+        "slug": "imitated-unarmed-attack",
+        "traits": ["agile", "finesse"]
+      }
+    ],
+    "traits": {
+      "rarity": "common",
+      "value": ["companion", "robot", "tech"]
+    }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!r0b0tImit4torC01"
+}
