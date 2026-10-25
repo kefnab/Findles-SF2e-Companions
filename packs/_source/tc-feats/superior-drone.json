@@ -1,0 +1,61 @@
+{
+  "_id": "a000000000000020",
+  "name": "Superior Drone",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Your advanced robot companion is upgraded into a specialized, superior robot companion. Its unarmed attack proficiency increases to expert, and its saving throws and Perception increase to master. Its unarmed Strikes deal 3 damage dice. Its flat bonus damage increases to +4, or +6 if it is Burly. It gains one Specialization option (such as Ambusher, Bully, Daredevil, Racer, Tracker, or Wrecker) and one Superior Customization of your choice.</p>"
+    },
+    "level": { "value": 14 },
+    "prerequisites": { "value": [{ "value": "Advanced Drone" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.proficiencies.attacks.unarmed.rank",
+        "value": 2
+      },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.perception.rank", "value": 3 },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.saves.fortitude.rank", "value": 3 },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.saves.reflex.rank", "value": 3 },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.saves.will.rank", "value": 3 },
+      {
+        "key": "DamageDice",
+        "selector": "melee-strike-damage",
+        "diceNumber": 1,
+        "predicate": ["item:category:unarmed"]
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Superior Drone Damage",
+        "selector": "strike-damage",
+        "predicate": ["advanced-drone-path:burly"],
+        "value": 6
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Superior Drone Damage",
+        "selector": "strike-damage",
+        "predicate": [{ "not": "advanced-drone-path:burly" }],
+        "value": 4
+      },
+      {
+        "alwaysActive": true,
+        "key": "RollOption",
+        "option": "companion:tier:superior"
+      }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000020"
+}

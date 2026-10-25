@@ -1,0 +1,177 @@
+{
+  "_id": "a000000000000018",
+  "name": "Tactical Drone",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Your commercial robot companion is upgraded into a tactical robot companion with enhanced statistics and tactical routines. Choose whether its size stays the same or increases by one size category. It gains one Tactical Customization of your choice.</p><p>Your robot companion can use its chassis's Support Benefit when you take the Support action. During an encounter, even if you don't Command your robot companion, it can use 1 action on your turn to Stride or Strike.</p>"
+    },
+    "level": { "value": 4 },
+    "prerequisites": { "value": [{ "value": "Commercial Robot Companion" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          { "label": "Keep its current size", "value": "same" },
+          { "label": "Increase its size by one category", "value": "increase" }
+        ],
+        "flag": "tacticalSize",
+        "prompt": "Choose whether to increase your robot companion's size",
+        "rollOption": "tactical-drone-size"
+      },
+      {
+        "key": "CreatureSize",
+        "predicate": ["tactical-drone-size:increase"],
+        "value": 1
+      },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.str.mod", "value": 1 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.dex.mod", "value": 1 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.con.mod", "value": 1 },
+      { "key": "ActiveEffectLike", "mode": "add", "path": "system.abilities.wis.mod", "value": 1 },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.perception.rank", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.saves.fortitude.rank", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.saves.reflex.rank", "value": 2 },
+      { "key": "ActiveEffectLike", "mode": "upgrade", "path": "system.saves.will.rank", "value": 2 },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.acrobatics.rank",
+        "predicate": [{ "gte": ["skill:acrobatics:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.arcana.rank",
+        "predicate": [{ "gte": ["skill:arcana:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.athletics.rank",
+        "predicate": [{ "gte": ["skill:athletics:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.crafting.rank",
+        "predicate": [{ "gte": ["skill:crafting:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.deception.rank",
+        "predicate": [{ "gte": ["skill:deception:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.diplomacy.rank",
+        "predicate": [{ "gte": ["skill:diplomacy:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.intimidation.rank",
+        "predicate": [{ "gte": ["skill:intimidation:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.medicine.rank",
+        "predicate": [{ "gte": ["skill:medicine:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.nature.rank",
+        "predicate": [{ "gte": ["skill:nature:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.occultism.rank",
+        "predicate": [{ "gte": ["skill:occultism:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.performance.rank",
+        "predicate": [{ "gte": ["skill:performance:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.piloting.rank",
+        "predicate": [{ "gte": ["skill:piloting:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.society.rank",
+        "predicate": [{ "gte": ["skill:society:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.stealth.rank",
+        "predicate": [{ "gte": ["skill:stealth:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.survival.rank",
+        "predicate": [{ "gte": ["skill:survival:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.thievery.rank",
+        "predicate": [{ "gte": ["skill:thievery:rank", 1] }],
+        "value": 2
+      },
+      {
+        "key": "DamageDice",
+        "selector": "melee-strike-damage",
+        "diceNumber": 1,
+        "predicate": ["item:category:unarmed"]
+      },
+      {
+        "alwaysActive": true,
+        "key": "RollOption",
+        "option": "companion:support-benefit"
+      },
+      {
+        "alwaysActive": true,
+        "key": "RollOption",
+        "option": "companion:independent-action"
+      }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000018"
+}

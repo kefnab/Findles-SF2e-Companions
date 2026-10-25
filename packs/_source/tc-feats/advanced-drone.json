@@ -1,0 +1,159 @@
+{
+  "_id": "a000000000000019",
+  "name": "Advanced Drone",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Your tactical robot companion advances into a Burly or Deft robot companion. Choose one path. It gains one Advanced Customization of your choice, and it can use its chassis's Advanced Maneuver.</p><p><strong>Burly</strong> Your companion can optionally increase its size by one category. It gains a +2 Strength modifier and a +1 modifier to Dexterity, Constitution, and Wisdom. It becomes an expert in Athletics, deals 3 additional damage with melee Strikes, and its attacks become magical.</p><p><strong>Deft</strong> Your companion gains a +2 Dexterity modifier and a +1 modifier to Strength, Constitution, and Wisdom. Choose Acrobatics or Stealth; your companion becomes an expert in that skill. Its attacks become magical.</p>"
+    },
+    "level": { "value": 8 },
+    "prerequisites": { "value": [{ "value": "Tactical Drone" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          { "label": "Burly", "value": "burly" },
+          { "label": "Deft", "value": "deft" }
+        ],
+        "flag": "advancedPath",
+        "prompt": "Choose your robot companion's advancement",
+        "rollOption": "advanced-drone-path"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          { "label": "Keep its current size", "value": "same" },
+          { "label": "Increase its size by one category", "value": "increase" }
+        ],
+        "flag": "burlySize",
+        "predicate": ["advanced-drone-path:burly"],
+        "prompt": "Choose whether to increase your Burly companion's size",
+        "rollOption": "burly-drone-size"
+      },
+      {
+        "key": "CreatureSize",
+        "predicate": ["burly-drone-size:increase"],
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.str.mod",
+        "predicate": ["advanced-drone-path:burly"],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.dex.mod",
+        "predicate": ["advanced-drone-path:burly"],
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.con.mod",
+        "predicate": ["advanced-drone-path:burly"],
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.wis.mod",
+        "predicate": ["advanced-drone-path:burly"],
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.athletics.rank",
+        "predicate": ["advanced-drone-path:burly"],
+        "value": 2
+      },
+      {
+        "key": "FlatModifier",
+        "label": "Burly Melee Damage",
+        "selector": "melee-strike-damage",
+        "predicate": [
+          "advanced-drone-path:burly",
+          { "not": "companion:tier:superior" }
+        ],
+        "value": 3
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.dex.mod",
+        "predicate": ["advanced-drone-path:deft"],
+        "value": 2
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.str.mod",
+        "predicate": ["advanced-drone-path:deft"],
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.con.mod",
+        "predicate": ["advanced-drone-path:deft"],
+        "value": 1
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "add",
+        "path": "system.abilities.wis.mod",
+        "predicate": ["advanced-drone-path:deft"],
+        "value": 1
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": [
+          { "label": "Acrobatics", "value": { "skill": "acrobatics" } },
+          { "label": "Stealth", "value": { "skill": "stealth" } }
+        ],
+        "flag": "deftSkill",
+        "predicate": ["advanced-drone-path:deft"],
+        "prompt": "Choose an expert skill for the Deft path",
+        "rollOption": "deft-drone-skill"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.{item|flags.system.rulesSelections.deftSkill.skill}.rank",
+        "predicate": ["advanced-drone-path:deft"],
+        "value": 2
+      },
+      {
+        "key": "AdjustStrike",
+        "mode": "add",
+        "property": "traits",
+        "value": "magical"
+      },
+      {
+        "alwaysActive": true,
+        "key": "RollOption",
+        "option": "companion:advanced-maneuver"
+      },
+      {
+        "alwaysActive": true,
+        "key": "RollOption",
+        "option": "companion:tier:advanced"
+      }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000019"
+}
