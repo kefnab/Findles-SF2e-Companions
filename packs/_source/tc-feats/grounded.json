@@ -1,0 +1,25 @@
+{
+  "_id": "a000000000000007",
+  "name": "Grounded",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Internal surge arrestors and insulated wiring protect your drone companion's vital systems from electrical overload. It loses its weakness to electricity.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000007"
+}

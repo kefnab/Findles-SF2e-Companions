@@ -1,0 +1,25 @@
+{
+  "_id": "a000000000000002",
+  "name": "Artificial Personality",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Your drone companion is programmed with a social interaction algorithm. It gains an artificial personality, can attempt skill checks that require Charisma, and can speak Common.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000002"
+}

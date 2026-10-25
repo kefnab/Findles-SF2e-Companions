@@ -1,0 +1,29 @@
+{
+  "_id": "a000000000000014",
+  "name": "Olfactory Receptors",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Chemical sniffer arrays analyze atmospheric particles in real time. Your drone companion gains scent as an imprecise sense with a range of 30 feet.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [{ "acuity": "imprecise", "key": "Sense", "range": 30, "selector": "scent" }],
+    "subfeatures": {
+      "proficiencies": {},
+      "senses": { "scent": { "acuity": "imprecise", "range": 30 } },
+      "suppressedFeatures": []
+    },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000014"
+}

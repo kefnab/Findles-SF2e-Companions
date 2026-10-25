@@ -1,0 +1,25 @@
+{
+  "_id": "a000000000000008",
+  "name": "Integrated Weapon Mount",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>A specialized hardpoint or recess lets a weapon be built directly into your drone companion's frame. It gains one weapon mount. You can install or uninstall a weapon into the mount as a 10-minute activity with the manipulate trait. A one-handed weapon requires one weapon mount; a two-handed weapon requires two. When installed, the companion is wielding the weapon and can't be Disarmed of it. It can Interact to reload the weapon; this Interact loses the manipulate trait and requires no free hands.</p><p><strong>Special</strong> You can select this customization repeatedly, gaining an additional weapon mount each time.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000008"
+}

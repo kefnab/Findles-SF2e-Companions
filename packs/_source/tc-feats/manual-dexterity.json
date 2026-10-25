@@ -1,0 +1,25 @@
+{
+  "_id": "a000000000000011",
+  "name": "Manual Dexterity",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Multi-jointed manipulators or articulated robotic hands are attached to your drone companion's limbs. It can use up to two of its limbs as functional hands to perform manipulate actions.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000011"
+}

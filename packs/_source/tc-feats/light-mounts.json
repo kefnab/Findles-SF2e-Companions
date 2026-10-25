@@ -1,0 +1,25 @@
+{
+  "_id": "a000000000000009",
+  "name": "Light Mounts",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "action" },
+    "actions": { "value": 1 },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>High-intensity LED headlamps or light projectors are installed on your drone companion's chassis. It sheds bright light in a 20-foot radius and dim light for the next 20 feet. The companion can toggle this light on or off as a single action.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "light", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000009"
+}

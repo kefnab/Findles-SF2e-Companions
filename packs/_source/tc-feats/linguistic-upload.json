@@ -1,0 +1,30 @@
+{
+  "_id": "a000000000000010",
+  "name": "Linguistic Upload",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Language databases and translation subroutines are compiled into local storage. Your drone companion can speak two additional languages of your choice.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": {
+      "value": [
+        { "value": "Drone Companion ancestry" },
+        { "value": "Artificial Personality or Sapient Customization" }
+      ]
+    },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000010"
+}

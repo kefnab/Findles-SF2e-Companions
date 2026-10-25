@@ -1,0 +1,40 @@
+{
+  "_id": "a000000000000001",
+  "name": "Armored Plates",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Your drone companion is reinforced with high-density protective plating. It gains a +1 item bonus to AC, or a +2 item bonus if it is a superior robot companion. It continues to use its unarmored proficiency rank to calculate its AC.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      {
+        "key": "FlatModifier",
+        "predicate": ["companion:tier:superior"],
+        "selector": "ac",
+        "type": "item",
+        "value": 2
+      },
+      {
+        "key": "FlatModifier",
+        "predicate": [{ "not": "companion:tier:superior" }],
+        "selector": "ac",
+        "type": "item",
+        "value": 1
+      }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000001"
+}

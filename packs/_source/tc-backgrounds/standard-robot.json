@@ -1,0 +1,56 @@
+{
+  "_id": "b000000000000002",
+  "name": "Standard Robot",
+  "type": "background",
+  "img": "systems/sf2e/icons/default-icons/background.svg",
+  "system": {
+    "boosts": {
+      "0": { "value": [] },
+      "1": { "value": [] }
+    },
+    "description": {
+      "value": "<p>Your robot companion received a standard commercial configuration before entering service. Choose two different level-1 ancestry feats from the Commercial Customizations available to drone companions.</p>"
+    },
+    "items": {},
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      {
+        "choices": {
+          "filter": ["item:category:ancestry", "item:level:1"],
+          "pack": "findles-sf2e-companions.tc-feats"
+        },
+        "adjustName": false,
+        "flag": "standardCustomization1",
+        "key": "ChoiceSet",
+        "prompt": "Choose the first Commercial Customization",
+        "rollOption": "commercial-customization"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.standardCustomization1}"
+      },
+      {
+        "choices": {
+          "filter": ["item:category:ancestry", "item:level:1"],
+          "pack": "findles-sf2e-companions.tc-feats"
+        },
+        "adjustName": false,
+        "flag": "standardCustomization2",
+        "key": "ChoiceSet",
+        "prompt": "Choose the second Commercial Customization",
+        "rollOption": "commercial-customization"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.standardCustomization2}"
+      }
+    ],
+    "trainedSkills": { "lore": [], "value": [] },
+    "traits": { "rarity": "common", "value": [] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!b000000000000002"
+}

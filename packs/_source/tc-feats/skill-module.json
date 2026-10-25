@@ -1,0 +1,56 @@
+{
+  "_id": "a000000000000015",
+  "name": "Skill Module",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feats-sf2e.webp",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "ancestry",
+    "description": {
+      "value": "<p>Specialized subroutines grant your drone companion proficiency in one skill of your choice.</p><p><strong>Special</strong> You can select this customization repeatedly, choosing a different skill each time.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [{ "value": "Drone Companion ancestry" }] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      {
+        "choices": [
+          { "label": "Acrobatics", "value": { "skill": "acrobatics" } },
+          { "label": "Arcana", "value": { "skill": "arcana" } },
+          { "label": "Athletics", "value": { "skill": "athletics" } },
+          { "label": "Crafting", "value": { "skill": "crafting" } },
+          { "label": "Deception", "value": { "skill": "deception" } },
+          { "label": "Diplomacy", "value": { "skill": "diplomacy" } },
+          { "label": "Intimidation", "value": { "skill": "intimidation" } },
+          { "label": "Medicine", "value": { "skill": "medicine" } },
+          { "label": "Nature", "value": { "skill": "nature" } },
+          { "label": "Occultism", "value": { "skill": "occultism" } },
+          { "label": "Performance", "value": { "skill": "performance" } },
+          { "label": "Piloting", "value": { "skill": "piloting" } },
+          { "label": "Society", "value": { "skill": "society" } },
+          { "label": "Stealth", "value": { "skill": "stealth" } },
+          { "label": "Survival", "value": { "skill": "survival" } },
+          { "label": "Thievery", "value": { "skill": "thievery" } }
+        ],
+        "flag": "skill",
+        "key": "ChoiceSet",
+        "prompt": "Choose a skill",
+        "rollOption": "skill-module"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.skills.{item|flags.system.rulesSelections.skill.skill}.rank",
+        "value": 1
+      }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!a000000000000015"
+}

@@ -1,6 +1,6 @@
 {
   "_id": "dr0neC0mpAnces01",
-  "name": "FSC.Packs.AncestryEntries.DroneCompanion.Name",
+  "name": "Drone Companion",
   "type": "ancestry",
   "img": "modules/findles-sf2e-companions/assets/icons/robot-companion.svg",
   "system": {
@@ -20,7 +20,7 @@
       "dronetraits": {
         "img": "systems/sf2e/icons/default-icons/feat.svg",
         "level": 1,
-        "name": "FSC.Packs.AncestryFeatureEntries.DroneCompanionTraits.Name",
+        "name": "Drone Companion Traits",
         "uuid": "Compendium.findles-sf2e-companions.tc-ancestry-features.Item.dr0neC0mpTr41t01"
       }
     },
