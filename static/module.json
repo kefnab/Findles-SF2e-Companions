@@ -1,9 +1,9 @@
 {
-  "id": "findles-starfinder-helper",
-  "title": "Findle's Starfinder Helper",
-  "description": "Starfinder 2e helper module for Foundry VTT v14+ that looks to add quality of life improvements for players and GMs alike for Tech Core. This module is a work in progress and will be updated as new features are added.",
+  "id": "findles-sf2e-companions",
+  "title": "Findle's Starfinder Companions",
+  "description": "Starfinder 2e module for Foundry VTT v14+ that looks to add quality of life improvements for players and GMs alike for Tech Core. This module is a work in progress and will be updated as new features are added.",
   "version": "0.0.0",
-  "license": "Apache-2.0",
+  "license": "GPL-3",
   "authors": [
     {
     "name": "Findle",
@@ -23,6 +23,101 @@
       "lang": "en",
       "name": "English",
       "path": "lang/en.json"
+    }
+  ],
+    "packs": [
+    {
+      "name": "tc-ancestries",
+      "label": "FSC.Packs.Ancestries",
+      "path": "packs/tc-ancestries",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "tc-heritages",
+      "label": "FSC.Packs.Heritages",
+      "path": "packs/tc-heritages",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "tc-ancestry-features",
+      "label": "FSC.Packs.AncestryFeatures",
+      "path": "packs/tc-ancestry-features",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "tc-backgrounds",
+      "label": "FSC.Packs.Backgrounds",
+      "path": "packs/tc-backgrounds",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "tc-classes",
+      "label": "FSC.Packs.Classes",
+      "path": "packs/tc-classes",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "tc-class-features",
+      "label": "FSC.Packs.ClassFeatures",
+      "path": "packs/tc-class-features",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    },
+    {
+      "name": "tc-feats",
+      "label": "FSC.Packs.Feats",
+      "path": "packs/tc-feats",
+      "type": "Item",
+      "system": "sf2e",
+      "ownership": {
+        "PLAYER": "OBSERVER",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+    "packFolders": [
+    {
+      "name": "SF2e Companions (Tech Core)",
+      "sorting": "m",
+      "color": "#1b4b72",
+      "packs": [
+        "tc-ancestries",
+        "tc-heritages",
+        "tc-ancestry-features",
+        "tc-backgrounds",
+        "tc-classes",
+        "tc-class-features",
+        "tc-feats"
+      ]
     }
   ],
   "relationships": {

@@ -5,7 +5,9 @@
   "description": "Starfinder 2e helper module for Foundry VTT v14+ that looks to add quality of life improvements for players and GMs alike for Tech Core. This module is a work in progress and will be updated as new features are added.",
   "license": "GPL-3",
   "scripts": {
-    "build": "tsc --noEmit && vite build",
+    "build": "tsc --noEmit && vite build && npm run build:packs",
+    "build:packs": "node scripts/pack.ts",
+    "unpack": "node scripts/unpack.ts",
     "dev": "vite build --watch"
   },
   "devDependencies": {

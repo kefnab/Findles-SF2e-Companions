@@ -1,0 +1,56 @@
+{
+  "_id": "dr0neC0mpAnces01",
+  "name": "FSC.Packs.AncestryEntries.DroneCompanion.Name",
+  "type": "ancestry",
+  "img": "modules/findles-sf2e-companions/assets/icons/robot-companion.svg",
+  "system": {
+    "additionalLanguages": {
+      "count": 0,
+      "custom": "",
+      "value": []
+    },
+    "boosts": {},
+    "description": {
+      "value": "@Localize[FSC.Packs.AncestryEntries.DroneCompanion.Description]"
+    },
+    "flaws": {},
+    "hands": 2,
+    "hp": 0,
+    "items": {
+      "dronetraits": {
+        "img": "systems/sf2e/icons/default-icons/feat.svg",
+        "level": 1,
+        "name": "FSC.Packs.AncestryFeatureEntries.DroneCompanionTraits.Name",
+        "uuid": "Compendium.findles-sf2e-companions.tc-ancestry-features.Item.dr0neC0mpTr41t01"
+      }
+    },
+    "languages": {
+      "custom": "",
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Starfinder Tech Core"
+    },
+    "reach": 5,
+    "rules": [],
+    "size": "med",
+    "speed": 0,
+    "traits": {
+      "otherTags": [],
+      "rarity": "common",
+      "value": [
+        "construct",
+        "robot",
+        "tech"
+      ]
+    },
+    "vision": "normal"
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!dr0neC0mpAnces01"
+}

@@ -1,0 +1,1 @@
+export const MODULE_ID = "findles-sf2e-companions" as const;

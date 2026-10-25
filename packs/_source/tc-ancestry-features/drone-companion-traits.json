@@ -1,0 +1,133 @@
+{
+  "_id": "dr0neC0mpTr41t01",
+  "name": "FSC.Packs.AncestryFeatureEntries.DroneCompanionTraits.Name",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feat.svg",
+  "system": {
+    "actionType": {
+      "value": "passive"
+    },
+    "actions": {
+      "value": null
+    },
+    "category": "ancestryfeature",
+    "description": {
+      "value": "@Localize[FSC.Packs.AncestryFeatureEntries.DroneCompanionTraits.Description]"
+    },
+    "level": {
+      "value": 1
+    },
+    "prerequisites": {
+      "value": []
+    },
+    "publication": {
+      "license": "ORC",
+      "remaster": true,
+      "title": "Starfinder Tech Core"
+    },
+    "rules": [
+      {
+        "key": "Immunity",
+        "type": "bleed"
+      },
+      {
+        "key": "Immunity",
+        "type": "death-effects"
+      },
+      {
+        "key": "Immunity",
+        "type": "disease"
+      },
+      {
+        "key": "Immunity",
+        "type": "doomed"
+      },
+      {
+        "key": "Immunity",
+        "type": "drained"
+      },
+      {
+        "key": "Immunity",
+        "type": "fatigued"
+      },
+      {
+        "key": "Immunity",
+        "type": "healing"
+      },
+      {
+        "key": "Immunity",
+        "type": "mental"
+      },
+      {
+        "key": "Immunity",
+        "type": "nonlethal-attacks"
+      },
+      {
+        "key": "Immunity",
+        "type": "paralyzed"
+      },
+      {
+        "key": "Immunity",
+        "type": "poison"
+      },
+      {
+        "key": "Immunity",
+        "type": "sickened"
+      },
+      {
+        "key": "Immunity",
+        "type": "spirit"
+      },
+      {
+        "key": "Immunity",
+        "type": "unconscious"
+      },
+      {
+        "key": "Immunity",
+        "type": "vitality"
+      },
+      {
+        "key": "Immunity",
+        "type": "void"
+      },
+      {
+        "key": "Weakness",
+        "type": "electricity",
+        "value": "ceil(@actor.level / 2)"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.proficiencies.attacks.simple.rank",
+        "priority": 99,
+        "value": "{actor|system.proficiencies.attacks.unarmed.rank}"
+      },
+      {
+        "key": "ActiveEffectLike",
+        "mode": "upgrade",
+        "path": "system.proficiencies.attacks.martial.rank",
+        "priority": 99,
+        "value": "{actor|system.proficiencies.attacks.unarmed.rank}"
+      }
+    ],
+    "subfeatures": {
+      "proficiencies": {},
+      "senses": {},
+      "suppressedFeatures": []
+    },
+    "traits": {
+      "otherTags": [],
+      "rarity": "common",
+      "value": [
+        "construct",
+        "robot",
+        "tech"
+      ]
+    }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!dr0neC0mpTr41t01"
+}

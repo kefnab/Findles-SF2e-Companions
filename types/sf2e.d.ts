@@ -2,7 +2,7 @@
 
 declare global {
   interface SettingConfig {
-    "findles-starfinder-helper.enableWelcome": boolean;
+    "findles-sf2e-companions.enableWelcome": boolean;
   }
 }
 
