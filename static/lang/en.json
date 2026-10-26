@@ -1,6 +1,7 @@
 {
   "FINDLES_SF2E": {
-    "WelcomeMessage": "My SF2e Module loaded from GitHub Release!",
+    "WelcomeMessage": "{name} v{version} module loaded successfully!",
+    "DesperateRepairMessage": "Companion gains a number of THP equal to <b>Mechanic Level + Mechanic Int Modifier</b> until the end of the mechanic's next turn.",
     "Settings": {
       "EnableWelcome": {
         "Name": "Show Welcome Notification",

@@ -56,6 +56,18 @@ Hooks.on("preCreateItem", (item: any) => {
   if (localized && localized !== item.name) item.updateSource({ name: localized });
 });
 
+// Desperate Repair's THP come from the mechanic's stats, so the drone posts a reminder when it is toggled on.
+Hooks.on("preUpdateItem", (item: any, changes: any) => {
+  const newRules = changes?.system?.rules;
+  if (!Array.isArray(newRules) || !item.actor) return;
+  const find = (rules: any[]) => rules?.find((r) => r?.option === "mechanic:modify:desperate-repair");
+  if (find(item.system.rules)?.value || !find(newRules)?.value) return;
+  void ChatMessage.create({
+    speaker: ChatMessage.getSpeaker({ actor: item.actor }),
+    content: game.i18n!.localize("FINDLES_SF2E.DesperateRepairMessage")
+  });
+});
+
 // Localize keys shown in compendium windows, the sidebar directory, and item sheets.
 for (const hook of ["renderCompendium", "renderCompendiumDirectory", "renderItemSheet"]) {
   Hooks.on(hook as any, localizeOnRender as any);
@@ -63,5 +75,11 @@ for (const hook of ["renderCompendium", "renderCompendiumDirectory", "renderItem
 
 Hooks.once("ready", () => {
   if (!game.settings!.get(MODULE_ID, "enableWelcome")) return;
-  ui.notifications!.info(game.i18n!.localize("FINDLES_SF2E.WelcomeMessage"));
+  const manifest = game.modules!.get(MODULE_ID);
+  ui.notifications!.info(
+    game.i18n!.format("FINDLES_SF2E.WelcomeMessage", {
+      name: manifest?.title ?? MODULE_ID,
+      version: manifest?.version ?? "unknown"
+    })
+  );
 });

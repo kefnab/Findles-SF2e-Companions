@@ -14,11 +14,17 @@
         "name": "Exocortex Neural Link",
         "uuid": "Compendium.findles-sf2e-companions.tc-class-features.Item.c000000000000001"
       },
-      "mechanicModifyCompatibility": {
+      "killbot": {
         "img": "systems/sf2e/icons/default-icons/feat.svg",
         "level": 1,
-        "name": "Mechanic Modify Compatibility",
+        "name": "Killbot",
         "uuid": "Compendium.findles-sf2e-companions.tc-class-features.Item.c000000000000002"
+      },
+      "desperateRepair": {
+        "img": "systems/sf2e/icons/default-icons/feat.svg",
+        "level": 1,
+        "name": "Desperate Repair",
+        "uuid": "Compendium.findles-sf2e-companions.tc-class-features.Item.c000000000000004"
       },
       "companionItemBonusCap": {
         "img": "systems/sf2e/icons/default-icons/feat.svg",

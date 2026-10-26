@@ -1,0 +1,28 @@
+{
+  "_id": "c000000000000004",
+  "name": "Desperate Repair",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feat.svg",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>When the Mechanic's Desperate Repair Modify is active, the drone gains temporary Hit Points equal to the Mechanic's level plus their Intelligence modifier until the end of the Mechanic's next turn.</p><p>Because this amount depends on the Mechanic rather than the drone, turning on the toggle below posts a reminder to chat instead of applying temporary Hit Points automatically.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      { "key": "RollOption", "option": "companion:type:drone", "alwaysActive": true },
+      { "key": "RollOption", "option": "mechanic:modify:desperate-repair", "toggleable": true }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["mechanic", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!c000000000000004"
+}
