@@ -1,6 +1,6 @@
 {
-  "_id": "dr0neC0mpTr41t01",
-  "name": "Drone Companion Traits",
+  "_id": "robotCompTrait01",
+  "name": "Robot Companion Traits",
   "type": "feat",
   "img": "systems/sf2e/icons/default-icons/feat.svg",
   "system": {
@@ -12,7 +12,7 @@
     },
     "category": "ancestryfeature",
     "description": {
-      "value": "@Localize[FSC.Packs.AncestryFeatureEntries.DroneCompanionTraits.Description]"
+      "value": "@Localize[FSC.Packs.AncestryFeatureEntries.RobotCompanionTraits.Description]"
     },
     "level": {
       "value": 1
@@ -129,5 +129,5 @@
   "folder": null,
   "sort": 0,
   "effects": [],
-  "_key": "!items!dr0neC0mpTr41t01"
+  "_key": "!items!robotCompTrait01"
 }

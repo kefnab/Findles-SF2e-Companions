@@ -1,6 +1,6 @@
 {
-  "_id": "dr0neC0mpAnces01",
-  "name": "Drone Companion",
+  "_id": "robotCompAnces01",
+  "name": "Robot Companion",
   "type": "ancestry",
   "img": "modules/findles-sf2e-companions/assets/icons/robot-companion.svg",
   "system": {
@@ -11,17 +11,17 @@
     },
     "boosts": {},
     "description": {
-      "value": "@Localize[FSC.Packs.AncestryEntries.DroneCompanion.Description]"
+      "value": "@Localize[FSC.Packs.AncestryEntries.RobotCompanion.Description]"
     },
     "flaws": {},
     "hands": 2,
     "hp": 0,
     "items": {
-      "dronetraits": {
+      "robottraits": {
         "img": "systems/sf2e/icons/default-icons/feat.svg",
         "level": 1,
-        "name": "Drone Companion Traits",
-        "uuid": "Compendium.findles-sf2e-companions.tc-ancestry-features.Item.dr0neC0mpTr41t01"
+        "name": "Robot Companion Traits",
+        "uuid": "Compendium.findles-sf2e-companions.tc-ancestry-features.Item.robotCompTrait01"
       }
     },
     "languages": {
@@ -35,8 +35,6 @@
     },
     "reach": 5,
     "rules": [],
-    "size": "med",
-    "speed": 0,
     "traits": {
       "otherTags": [],
       "rarity": "common",
@@ -52,5 +50,5 @@
   "folder": null,
   "sort": 0,
   "effects": [],
-  "_key": "!items!dr0neC0mpAnces01"
+  "_key": "!items!robotCompAnces01"
 }
