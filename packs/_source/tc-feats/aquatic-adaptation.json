@@ -15,7 +15,7 @@
     "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
     "rules": [{ "key": "BaseSpeed", "selector": "swim", "value": 20 }],
     "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
-    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "robot", "tech"] }
+    "traits": { "otherTags": ["commercial-customization"], "rarity": "common", "value": ["companion", "robot", "tech"] }
   },
   "flags": {},
   "folder": null,

@@ -1,0 +1,29 @@
+{
+  "_id": "c000000000000002",
+  "name": "Mechanic Modify Compatibility",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feat.svg",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your drone's frame and integrated weapon systems are calibrated to receive real-time overrides through your Mechanic Modify action. The drone counts as armor for Modify targeting, and its unarmed attacks count as weapons.</p><p><strong>Killbot:</strong> When the Mechanic's Killbot Modify is active, the drone gains a status bonus to damage equal to +2 per weapon damage die.</p><p><strong>Desperate Repair:</strong> When the Mechanic's Desperate Repair Modify is active, the drone gains temporary Hit Points equal to the Mechanic's level plus their Intelligence modifier until the end of the Mechanic's next turn.</p><p>At 5th level, Modify can change the damage type of the drone's unarmed or mounted weapon Strikes to acid, cold, electricity, fire, or sonic. These effects need the Mechanic's linked Modify action to target and resolve the drone, so the toggles below are roll-option markers rather than automatic damage or temporary-HP modifiers.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      { "key": "RollOption", "option": "companion:type:drone", "alwaysActive": true },
+      { "key": "RollOption", "option": "mechanic:modify:killbot", "toggleable": true },
+      { "key": "RollOption", "option": "mechanic:modify:desperate-repair", "toggleable": true }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["mechanic", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!c000000000000002"
+}

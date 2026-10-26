@@ -1,0 +1,72 @@
+{
+  "_id": "c000000000000001",
+  "name": "Exocortex Neural Link",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feat.svg",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Your exocortex is synchronized with your brain to remotely control your drone companion through a direct mental link. At 1st level, choose three different level-1 Commercial Customizations for the drone.</p><p>The link has a range of 150 feet. Beyond that range, the drone cannot take actions. During daily preparations, the drone is restored to maximum Hit Points. Repairing it out of combat takes 1 hour, reduced to 10 minutes with Quick Repair. The exocortex program is immune to glitching; this does not protect the drone's physical body from environmental glitching.</p><p>The range, restoration, repair-time reduction, and program-only glitch immunity are recorded here as rules text; they require linked-actor or daily-preparation automation that item rule elements do not provide.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [
+      {
+        "key": "ChoiceSet",
+        "choices": {
+          "filter": ["item:tag:commercial-customization", "item:level:1"],
+          "pack": "findles-sf2e-companions.tc-feats"
+        },
+        "adjustName": false,
+        "flag": "exocortexCustomization1",
+        "prompt": "Choose the first Commercial Customization",
+        "rollOption": "commercial-customization"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.exocortexCustomization1}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": {
+          "filter": ["item:tag:commercial-customization", "item:level:1"],
+          "pack": "findles-sf2e-companions.tc-feats"
+        },
+        "adjustName": false,
+        "flag": "exocortexCustomization2",
+        "prompt": "Choose the second Commercial Customization",
+        "rollOption": "commercial-customization"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.exocortexCustomization2}"
+      },
+      {
+        "key": "ChoiceSet",
+        "choices": {
+          "filter": ["item:tag:commercial-customization", "item:level:1"],
+          "pack": "findles-sf2e-companions.tc-feats"
+        },
+        "adjustName": false,
+        "flag": "exocortexCustomization3",
+        "prompt": "Choose the third Commercial Customization",
+        "rollOption": "commercial-customization"
+      },
+      {
+        "key": "GrantItem",
+        "uuid": "{item|flags.system.rulesSelections.exocortexCustomization3}"
+      },
+      { "key": "RollOption", "option": "exocortex:range:150", "alwaysActive": true }
+    ],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["mechanic", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!c000000000000001"
+}

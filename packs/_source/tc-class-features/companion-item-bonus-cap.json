@@ -1,0 +1,25 @@
+{
+  "_id": "c000000000000003",
+  "name": "Companion Item Bonus Cap",
+  "type": "feat",
+  "img": "systems/sf2e/icons/default-icons/feat.svg",
+  "system": {
+    "actionType": { "value": "passive" },
+    "actions": { "value": null },
+    "category": "classfeature",
+    "description": {
+      "value": "<p>Companion equipment and upgrades follow the companion item bonus limits. Item bonuses can apply only to AC, to a maximum of +3, and Speed. Item bonuses to attack rolls, saving throws, or damage do not apply.</p><p>This cap is provided as rules text; the current system rule elements do not expose a general companion-wide item-bonus cap.</p>"
+    },
+    "level": { "value": 1 },
+    "prerequisites": { "value": [] },
+    "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
+    "rules": [],
+    "subfeatures": { "proficiencies": {}, "senses": {}, "suppressedFeatures": [] },
+    "traits": { "otherTags": [], "rarity": "common", "value": ["companion", "tech"] }
+  },
+  "flags": {},
+  "folder": null,
+  "sort": 0,
+  "effects": [],
+  "_key": "!items!c000000000000003"
+}

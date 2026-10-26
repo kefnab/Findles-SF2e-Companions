@@ -9,57 +9,11 @@
       "1": { "value": [] }
     },
     "description": {
-      "value": "<p>Your exocortex neural link was configured alongside your drone companion, giving it an extensive set of commercial customizations. Choose three different level-1 ancestry feats from the Commercial Customizations available to drone companions.</p>"
+      "value": "<p>Your exocortex neural link was configured alongside your drone companion. The Drone Companion class grants the neural link and its three Commercial Customization choices.</p>"
     },
     "items": {},
     "publication": { "license": "ORC", "remaster": true, "title": "Starfinder Tech Core" },
-    "rules": [
-      {
-        "choices": {
-          "filter": ["item:category:ancestry", "item:level:1"],
-          "pack": "findles-sf2e-companions.tc-feats"
-        },
-        "adjustName": false,
-        "flag": "exocortexCustomization1",
-        "key": "ChoiceSet",
-        "prompt": "Choose the first Commercial Customization",
-        "rollOption": "commercial-customization"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "{item|flags.system.rulesSelections.exocortexCustomization1}"
-      },
-      {
-        "choices": {
-          "filter": ["item:category:ancestry", "item:level:1"],
-          "pack": "findles-sf2e-companions.tc-feats"
-        },
-        "adjustName": false,
-        "flag": "exocortexCustomization2",
-        "key": "ChoiceSet",
-        "prompt": "Choose the second Commercial Customization",
-        "rollOption": "commercial-customization"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "{item|flags.system.rulesSelections.exocortexCustomization2}"
-      },
-      {
-        "choices": {
-          "filter": ["item:category:ancestry", "item:level:1"],
-          "pack": "findles-sf2e-companions.tc-feats"
-        },
-        "adjustName": false,
-        "flag": "exocortexCustomization3",
-        "key": "ChoiceSet",
-        "prompt": "Choose the third Commercial Customization",
-        "rollOption": "commercial-customization"
-      },
-      {
-        "key": "GrantItem",
-        "uuid": "{item|flags.system.rulesSelections.exocortexCustomization3}"
-      }
-    ],
+    "rules": [],
     "trainedSkills": { "lore": [], "value": [] },
     "traits": { "rarity": "common", "value": [] }
   },
